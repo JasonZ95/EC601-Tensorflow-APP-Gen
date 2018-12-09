@@ -74,12 +74,12 @@ $mail = new PHPMailer; //$mail->SMTPDebug = 3;                               // 
 $mail->isSMTP(); // Set mailer to use SMTP 
 $mail->Host = 'smtp.gmail.com'; // Specify main and backup SMTP servers. 这里改成smtp.gmail.com 
 $mail->SMTPAuth = true; // Enable SMTP authentication 
-$mail->Username = 'your email address'; // SMTP username 这里改成自己的gmail邮箱，最好新注册一个，因为后期设置会导致安全性降低 
-$mail->Password = 'your password'; // SMTP password 这里改成对应邮箱密码 
+$mail->Username = 'your email address'; // SMTP username__set it as your own email
+$mail->Password = 'your password'; // SMTP password__change it into your password
 $mail->SMTPSecure = 'tls'; // Enable TLS encryption, `ssl` also accepted 
 $mail->Port = 587; // TCP port to connect to 
 $mail->setFrom('your email', 'Mailer'); 
-$mail->addAddress('destination email address', 'user'); // Add a recipient 这里改成用于接收邮件的测试邮箱 
+$mail->addAddress('destination email address', 'user'); // Add a recipient
 $mail->addAttachment('/home/ece-student/Downloads/spo5q1n66gg11.jpg'); // Add attachments 
 $mail->isHTML(true); // Set email format to HTML 
 $mail->Subject = 'Here is the subject'; 
